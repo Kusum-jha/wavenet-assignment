@@ -1,0 +1,388 @@
+.management-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  min-height: calc(100vh - 100px);
+}
+
+.management-header {
+  margin-bottom: 2rem;
+  text-align: center;
+  animation: fadeIn 0.6s ease-in;
+}
+
+.management-header h1 {
+  font-size: 2.5rem;
+  color: #00d4ff;
+  margin: 0 0 0.5rem 0;
+  background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.management-header p {
+  color: #b0b0b0;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.management-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.management-card {
+  background: linear-gradient(135deg, #1e1e3f 0%, #1a1a2e 100%);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.management-card h2 {
+  color: #00d4ff;
+  margin: 0 0 1.5rem 0;
+  font-size: 1.5rem;
+  border-bottom: 2px solid rgba(0, 212, 255, 0.3);
+  padding-bottom: 0.75rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.filter-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  color: #e0e0e0;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group select {
+  padding: 0.75rem;
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #e0e0e0;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #00d4ff;
+  background-color: rgba(0, 212, 255, 0.1);
+  box-shadow: 0 0 12px rgba(0, 212, 255, 0.2);
+}
+
+.form-group input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.error-message {
+  background-color: rgba(255, 52, 52, 0.1);
+  border: 1px solid #ff3434;
+  color: #ff6b6b;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.success-message {
+  background-color: rgba(76, 175, 80, 0.1);
+  border: 1px solid #4caf50;
+  color: #81c784;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.result-count {
+  color: #b0b0b0;
+  font-size: 0.95rem;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  text-align: right;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 0.85rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+  color: #1a1a2e;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 212, 255, 0.3);
+}
+
+.btn-secondary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.btn-secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+}
+
+.btn-delete {
+  padding: 0.5rem 1rem;
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-delete:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+}
+
+/* Table Styles */
+.table-responsive {
+  overflow-x: auto;
+  border-radius: 6px;
+  border: 1px solid rgba(0, 212, 255, 0.2);
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.data-table thead {
+  background-color: rgba(0, 212, 255, 0.1);
+  border-bottom: 2px solid rgba(0, 212, 255, 0.3);
+}
+
+.data-table th {
+  padding: 1rem;
+  text-align: left;
+  color: #00d4ff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.data-table tbody tr {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.data-table tbody tr:hover {
+  background-color: rgba(0, 212, 255, 0.05);
+}
+
+.data-table td {
+  padding: 1rem;
+  color: #e0e0e0;
+  font-size: 0.95rem;
+}
+
+.data-table td.amount {
+  color: #4caf50;
+  font-weight: 600;
+}
+
+.role-badge {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  background-color: rgba(0, 212, 255, 0.15);
+  color: #00d4ff;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  border: 1px solid rgba(0, 212, 255, 0.3);
+}
+
+.role-select {
+  padding: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #e0e0e0;
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.role-select:focus {
+  outline: none;
+  border-color: #00d4ff;
+  background-color: rgba(0, 212, 255, 0.1);
+  box-shadow: 0 0 8px rgba(0, 212, 255, 0.2);
+}
+
+.no-data {
+  text-align: center;
+  padding: 2rem;
+  color: #b0b0b0;
+  font-size: 1.1rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .management-header h1 {
+    font-size: 2rem;
+  }
+
+  .management-card {
+    padding: 1.5rem;
+  }
+
+  .management-card h2 {
+    font-size: 1.3rem;
+  }
+
+  .form-grid,
+  .filter-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .data-table th,
+  .data-table td {
+    padding: 0.75rem;
+    font-size: 0.85rem;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    align-self: auto;
+  }
+
+  .btn-delete {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+  }
+
+  .role-select {
+    width: 100%;
+  }
+
+  .table-responsive {
+    overflow-x: auto;
+  }
+
+  .data-table {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .management-container {
+    padding: 1rem 0.75rem;
+  }
+
+  .management-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .management-header p {
+    font-size: 0.95rem;
+  }
+
+  .management-card {
+    padding: 1.25rem;
+  }
+
+  .management-card h2 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  .form-grid,
+  .filter-grid {
+    gap: 0.75rem;
+  }
+
+  .form-group label {
+    font-size: 0.9rem;
+  }
+
+  .form-group input,
+  .form-group select {
+    padding: 0.6rem;
+    font-size: 0.95rem;
+  }
+
+  .data-table {
+    font-size: 0.75rem;
+  }
+
+  .data-table th,
+  .data-table td {
+    padding: 0.5rem;
+  }
+
+  .role-badge {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.75rem;
+  }
+
+  .role-select {
+    padding: 0.4rem;
+    font-size: 0.85rem;
+  }
+
+  .btn-delete {
+    padding: 0.35rem 0.6rem;
+    font-size: 0.8rem;
+  }
+}
